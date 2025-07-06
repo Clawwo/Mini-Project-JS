@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Local User Database</title>
+</head>
+<body>
+    <h1 align="center">Addition of New Users</h1>
+<div class="contents" align="center">
+  
+  <div class="child-content" id="user-form">
+    <h2>User Data Form</h2>
+    <hr>
+    <form id="form-data-user">
+      <div class="form-element">
+        <label for="nama">Username</label><br>
+        <input id="nama" type="text" name="nama" placeholder="Input Username" value="" maxlength="100" required autocomplete="off"><br>
+      </div>
+      <div class="form-element">
+        <label for="umur">Umur user</label><br>
+        <input id="umur" type="text" name="umur" placeholder="Input Age" value="" maxlength="2" required autocomplete="off"><br>
+      </div>
+      <div class="form-element">
+        <label for="domisili">Domicile User</label><br>
+        <input id="domisili" type="text" name="domisili" placeholder="Domicility User" value="" maxlength="30"
+               required autocomplete="off"><br>
+      </div>
+      <div class="form-element">
+        <input id="submitButton" type="submit" value="Submit Data" class="submit">
+      </div>
+    </form>
+  </div>
+  
+  <div class="child-content" id="user-list">
+    <h2>User List</h2>
+    <hr>
+    <table id=user-list-table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Domicile</th>
+        </tr>
+      </thead>
+      <tbody id="user-list-detail" align="center">
+      </tbody>
+    </table>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

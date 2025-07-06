@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+     font-family: "Poppins", serif;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0; 
+    color: #333; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4rem;
+}
+
+h1, h2, h3 {
+    color: #2c3e50; 
+}
+
+hr {
+    height: 2px;
+    color: black;
+    background-color: black;
+    width: 95%;
+    margin: 20px 0; 
+}
+
+.title {
+  font-size: 2em;
+}
+
+.contents {
+    margin: 20px;
+    width: 90%; 
+    max-width: 1200px; 
+    margin-top: 3rem;
+}
+
+.child-content {
+    border: 2px solid #34495e; 
+    border-radius: 8px; 
+    padding: 20px; 
+    margin-bottom: 20px; 
+    background-color: #ecf0f1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.child-content h2 {
+    margin-bottom: 10px;
+}
+
+.form-element {
+    margin: 2%;
+}
+
+#user-form {
+    width: 50%;
+    height: 40%;
+}
+
+#user-list {
+    margin-top: 1%;
+    width: 55%;
+}
+
+#instructions-list {
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f0f0f0;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="submit"] {
+    background-color: #333; 
+    color: #fff; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+}
+
+input[type="submit"]:hover {
+    background-color: #444; 
+}
+
+input[type="text"] {
+    width: 100%; 
+    padding: 10px; 
+    margin-bottom: 25px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+}
+
+input[type="text"]:focus {
+    border-color: #333; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
