@@ -64,6 +64,33 @@ function searchItem(itemName) {
   }
 }
 
+function updateItem(itemName, newItemName, newItemPrice) {
+  const index = shoppingList.findIndex((item) => item.name === itemName);
+  if (index !== -1) {
+    shoppingList[index].name = newItemName;
+    shoppingList[index].price = newItemPrice;
+    console.log(
+      `Item "${itemName}" successfully updated to "${newItemName}" with price Rp${newItemPrice}`
+    );
+  } else {
+    console.log(`Item "${itemName}" not found. Cannot update.`);
+  }
+}
+
+function sortItemsByPrice(key, order = "asc") {
+  const sorted = shoppingList.sort((a, b) => {
+    return order === "asc" ? a.harga - b.harga : b.harga - a.harga;
+  });
+}
+
+function sortItemsByName(key, order = "asc") {
+  const sorted = shoppingList.sort((a, b) => {
+    return order === "asc"
+      ? a.nama.localeCompare(b.name)
+      : b.nama.localeCompare(a.name);
+  });
+}
+
 // Example usage
 addItem("Candy", 19000);
 addItem("Food", 9000);
