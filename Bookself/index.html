@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookshelf App</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <h1 class="logo">Bookshelf</h1>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="sidebar">
+        <h2>Add New Book</h2>
+        <form id="bookForm" data-testid="bookForm" class="book-form">
+          <div class="form-group">
+            <label for="bookFormTitle">Title</label>
+            <input
+              id="bookFormTitle"
+              type="text"
+              required
+              data-testid="bookFormTitleInput"
+              class="form-input"
+            />
+          </div>
+          <div class="form-group">
+            <label for="bookFormAuthor">Author</label>
+            <input
+              id="bookFormAuthor"
+              type="text"
+              required
+              data-testid="bookFormAuthorInput"
+              class="form-input"
+            />
+          </div>
+          <div class="form-group">
+            <label for="bookFormYear">Year</label>
+            <input
+              id="bookFormYear"
+              type="number"
+              required
+              data-testid="bookFormYearInput"
+              class="form-input"
+            />
+          </div>
+          <div class="form-group checkbox-group">
+            <input
+              id="bookFormIsComplete"
+              type="checkbox"
+              data-testid="bookFormIsCompleteCheckbox"
+              class="form-checkbox"
+            />
+            <label for="bookFormIsComplete">Finished reading</label>
+          </div>
+          <button
+            id="bookFormSubmit"
+            type="submit"
+            data-testid="bookFormSubmitButton"
+            class="primary-button"
+          >
+            Add to shelf
+          </button>
+        </form>
+      </section>
+      
+      <div class="main-content">
+        <section class="search-section">
+          <form id="searchBook" data-testid="searchBookForm" class="search-form">
+            <input
+              id="searchBookTitle"
+              type="text"
+              data-testid="searchBookFormTitleInput"
+              placeholder="Search by book title..."
+              class="search-input"
+            />
+            <button
+              id="searchSubmit"
+              type="submit"
+              data-testid="searchBookFormSubmitButton"
+              class="search-button"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+            </button>
+          </form>
+        </section>
+
+        <section class="bookshelf-section">
+          <h2 class="section-title">Unread Books</h2>
+          <div id="incompleteBookList" data-testid="incompleteBookList" class="book-list">
+            <div data-bookid="123123123" data-testid="bookItem" class="book-card">
+              <div class="book-info">
+                <h3 data-testid="bookItemTitle" class="book-title">Book Title 1</h3>
+                <p data-testid="bookItemAuthor" class="book-meta">by Author 1</p>
+                <p data-testid="bookItemYear" class="book-meta">2023</p>
+              </div>
+              <div class="book-actions">
+                <button data-testid="bookItemIsCompleteButton" class="action-button complete">
+                  Mark as read
+                </button>
+                <button data-testid="bookItemDeleteButton" class="action-button delete">
+                  Delete
+                </button>
+                <button data-testid="bookItemEditButton" class="action-button edit">
+                  Edit
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="bookshelf-section">
+          <h2 class="section-title">Read Books</h2>
+          <div id="completeBookList" data-testid="completeBookList" class="book-list">
+            <div data-bookid="456456456" data-testid="bookItem" class="book-card">
+              <div class="book-info">
+                <h3 data-testid="bookItemTitle" class="book-title">Book Title 2</h3>
+                <p data-testid="bookItemAuthor" class="book-meta">by Author 2</p>
+                <p data-testid="bookItemYear" class="book-meta">2022</p>
+              </div>
+              <div class="book-actions">
+                <button data-testid="bookItemIsCompleteButton" class="action-button incomplete">
+                  Mark as unread
+                </button>
+                <button data-testid="bookItemDeleteButton" class="action-button delete">
+                  Delete
+                </button>
+                <button data-testid="bookItemEditButton" class="action-button edit">
+                  Edit
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
